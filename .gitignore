@@ -1,0 +1,13 @@
+# Node
+node_modules/
+
+# Env
+.env
+
+# GitHub runner (VERY IMPORTANT)
+actions-runner/
+
+# Logs & misc
+*.log
+*.tar.gz
+*.zip

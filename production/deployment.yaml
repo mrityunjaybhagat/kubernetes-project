@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    env: production
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+        env: production
+    spec:
+      containers:
+      - name: nginx
+        image: mrityunjaybhagat/k8s-app:2.0
+        
+        ports:
+        - containerPort: 80
+        envFrom:
+        - configMapRef:
+            name: app-config
