@@ -6,6 +6,7 @@ node_modules/
 
 # GitHub runner (VERY IMPORTANT)
 actions-runner/
+node_modules/
 
 # Logs & misc
 *.log
